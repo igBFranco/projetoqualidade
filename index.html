@@ -29,24 +29,24 @@
         <div class="w3-hide-large" style="margin-top:83px"></div>
         
         <!-- Top header -->
-        <header class="" id="mySidebar">
-            <div class="w3-bar w3-padding-32 w3-large w3-black">
+        <header class="w3-row" id="mySidebar" ">
+            <div class="w3-bar w3-padding-32 w3-large w3-black w3-mobile">
                 <a class="w3-bar-item w3-button w3-wide w3-mobile w3-text-deep-orange w3-xlarge w3-round-large" href="index.html"><b>Computer Store <i class="fa fa-laptop"></i></b></a>
-                <div class="w3-right">
+                <div class="w3-left w3-bar-item w3-padding-5 w3-large w3-text-white" style="font-weight:bold">
+                    <a href="index.html" class="w3-bar-item w3-button w3-round-large">Ofertas</a>
+                    <div class="w3-dropdown-hover">
+                        <button class="w3-button w3-round-large w3-block " onclick="myFunction('Demo1')">Crie o Seu Notebook <i class="fa fa-caret-down"></i></button>
+                            <div class="w3-hide " id="Demo1" >
+                                <a href="criarnotebook.html" class=" w3-button w3-block w3-round-large">Intel</a>
+                                <a href="criarnotebook.html" class="w3-button w3-block w3-round-large">AMD</a>
+                                <a href="criarnotebook.html" class="w3-button w3-block w3-round-large">Qualcomm</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="w3-right w3-half w3-bar-item">
                     <a href="carrinho.html" class="w3-bar-item w3-button w3-round-large w3-mobile w3-margin-right-16">Carrinho<i class="fa fa-shopping-cart w3-margin-left w3-text-deep-orange"></i></a>
                     <a href="login.html" class="w3-bar-item w3-button w3-round-large">Login<i class="fa fa-user-circle-o w3-margin-left w3-text-deep-orange"></i></a>
                     <a href="login.html" class="w3-bar-item w3-button w3-round-large">Pesquisar<i class="fa fa-search w3-margin-left w3-text-deep-orange"></i></a>
-                </div>
-                <div class="w3-left w3-bar w3-padding-5 w3-large w3-text-white" style="font-weight:bold">
-                    <a href="index.html" class="w3-bar-item w3-button w3-round-large">Ofertas</a>
-                    <div class="w3-dropdown-hover">
-                        <button class="w3-button w3-round-large " >Crie o Seu Notebook <i class="fa fa-caret-down"></i></button>
-                            <div class="w3-dropdown-content w3-bar-block w3-border">
-                                <a href="criarnotebook.html" class="w3-bar-item w3-button">Intel</a>
-                                <a href="criarnotebook.html" class="w3-bar-item w3-button">AMD</a>
-                                <a href="criarnotebook.html" class="w3-bar-item w3-button">Qualcomm</a>
-                            </div>
-                    </div>
                 </div>
             </div>
         </header>
@@ -58,13 +58,13 @@
                 <h1 class="w3-jumbo w3-hide-small ">Novos Modelos</h1>
                 <h1 class="w3-hide-large w3-hide-medium">Novos Modelos</h1>
                 <h1 class="w3-hide-small">AMD Ryzen 7 5800U</h1>
-                <p><a href="#modelos" class="w3-button w3-deep-orange w3-padding-large w3-large w3-round-large">Visualizar</a></p>
+                <p><a href="#modelos" class="w3-button w3-deep-orange w3-padding-large w3-large w3-round-large w3-animate-bottom">Visualizar</a></p>
             </div>
         </div>
 
         <div class="w3-container w3-text-deep-orange" id="modelos">
             <br>
-            <h3>Modelos Mais Vendidos</h3>
+            <h3><b>Modelos Mais Vendidos</b></h3>
         </div>
 
         <!-- Product grid -->
@@ -159,7 +159,6 @@
 
         <!-- Personalizados -->
         <div class="w3-display-container">
-            <br>
             <img src="./images/personalizados.jpg" alt="Laptop" style="width:100%">
             <div class="w3-display-topleft w3-text-white w3-padding-32" style="padding:24px 48px">
                 <h1 class="w3-jumbo w3-hide-small">Modelos Personalizados</h1>
@@ -224,11 +223,14 @@
 
         <script>
         // Accordion 
-    
-
-        // Click on the "Jeans" link on page load to open the accordion for demo purposes
-        document.getElementById("myBtn").click();
-
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
         </script>
 
     </body>
