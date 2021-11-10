@@ -11,28 +11,7 @@
         .w3-sidebar a {font-family: "Roboto", sans-serif}
         body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </style>
-    <body class="w3-content" style="max-width:1200px">
-
-        <!-- Sidebar/menu -->
-        <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-        <div class="w3-container w3-display-container w3-padding-16">
-            <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-            <h3 class="w3-wide"><b>Computer Store <i class="fa fa-laptop"></i></b></h3>
-        </div>
-        <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-            <a href="#produtos" class="w3-bar-item w3-button">Notebooks</a>
-            <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-            Crie o Seu Notebook <i class="fa fa-caret-down"></i>
-            </a>
-            <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-            <a href="criarnotebook.html" class="w3-bar-item w3-button"></i>Intel</a>
-            <a href="criarnotebook.html" class="w3-bar-item w3-button">AMD</a>
-            <a href="criarnotebook.html" class="w3-bar-item w3-button">Qualcomm</a>
-            </div>
-        </div>
-        <a href="#footer" class="w3-bar-item w3-button w3-padding">Contato</a> 
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
-        </nav>
+    <body class="w3-content" style="max-width:1920px">
 
         <!-- Top menu on small screens -->
         <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
@@ -44,31 +23,42 @@
         <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
         <!-- !PAGE CONTENT! -->
-        <div class="w3-main" style="margin-left:250px">
+        <div class="w3-main" >
 
         <!-- Push down content on small screens -->
         <div class="w3-hide-large" style="margin-top:83px"></div>
         
         <!-- Top header -->
-        <header class="w3-container w3-xlarge" id="produtos">
-            <p class="w3-left w3-text-deep-orange">Notebooks</p>
-            <p class="w3-right">
-            <a href="carrinho.html" class="w3-button w3-white">Carrinho</a>
-            <i class="fa fa-shopping-cart "></i>
-            <a href="login.html" class="w3-button w3-white">Login</a>
-            <i class="fa fa-user-circle-o "></i>
-            <i class="fa fa-search w3-margin-left"></i>
-            </p>
+        <header class="" id="mySidebar">
+            <div class="w3-bar w3-padding-32 w3-large w3-black">
+                <a class="w3-bar-item w3-button w3-wide w3-mobile w3-text-deep-orange w3-xlarge w3-round-large" href="index.html"><b>Computer Store <i class="fa fa-laptop"></i></b></a>
+                <div class="w3-right">
+                    <a href="carrinho.html" class="w3-bar-item w3-button w3-round-large w3-mobile w3-margin-right-16">Carrinho<i class="fa fa-shopping-cart w3-margin-left w3-text-deep-orange"></i></a>
+                    <a href="login.html" class="w3-bar-item w3-button w3-round-large">Login<i class="fa fa-user-circle-o w3-margin-left w3-text-deep-orange"></i></a>
+                    <a href="login.html" class="w3-bar-item w3-button w3-round-large">Pesquisar<i class="fa fa-search w3-margin-left w3-text-deep-orange"></i></a>
+                </div>
+                <div class="w3-left w3-bar w3-padding-5 w3-large w3-text-white" style="font-weight:bold">
+                    <a href="index.html" class="w3-bar-item w3-button w3-round-large">Ofertas</a>
+                    <div class="w3-dropdown-hover">
+                        <button class="w3-button w3-round-large " >Crie o Seu Notebook <i class="fa fa-caret-down"></i></button>
+                            <div class="w3-dropdown-content w3-bar-block w3-border">
+                                <a href="criarnotebook.html" class="w3-bar-item w3-button">Intel</a>
+                                <a href="criarnotebook.html" class="w3-bar-item w3-button">AMD</a>
+                                <a href="criarnotebook.html" class="w3-bar-item w3-button">Qualcomm</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <!-- Image header -->
-        <div class="w3-display-container w3-container">
-            <img src="./images/banner.jpg" alt="Laptop" style="width:100%">
-            <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+        <div class="w3-display-container">
+            <img src="./images/banner.jpg" alt="Laptop" style="width: 100%;">
+            <div class="w3-display-topleft w3-text-white w3-padding-32" style="padding:24px 48px">
                 <h1 class="w3-jumbo w3-hide-small ">Novos Modelos</h1>
                 <h1 class="w3-hide-large w3-hide-medium">Novos Modelos</h1>
                 <h1 class="w3-hide-small">AMD Ryzen 7 5800U</h1>
-                <p><a href="#modelos" class="w3-button w3-deep-orange w3-padding-large w3-large">Visualizar</a></p>
+                <p><a href="#modelos" class="w3-button w3-deep-orange w3-padding-large w3-large w3-round-large">Visualizar</a></p>
             </div>
         </div>
 
@@ -168,14 +158,14 @@
 
 
         <!-- Personalizados -->
-        <div class="w3-display-container w3-container">
+        <div class="w3-display-container">
             <br>
             <img src="./images/personalizados.jpg" alt="Laptop" style="width:100%">
-            <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+            <div class="w3-display-topleft w3-text-white w3-padding-32" style="padding:24px 48px">
                 <h1 class="w3-jumbo w3-hide-small">Modelos Personalizados</h1>
                 <h1 class="w3-hide-large w3-hide-medium">Modelos Personalizados</h1>
                 <h1 class="w3-hide-small">Crie e configure o seu Notebook</h1>
-                <p><a href="criarnotebook.html" class="w3-button w3-deep-orange w3-padding-large w3-large">Configure Já</a></p>
+                <p><a href="criarnotebook.html" class="w3-button w3-deep-orange w3-padding-large w3-large w3-round-large">Configure Já</a></p>
             </div>
         </div>
 
@@ -190,28 +180,27 @@
                 <div class="w3-col s4">
                     <h4>Newsletter</h4>
                         <p>Receba as nossas novidades por e-mail</p>
-                        <p><input class="w3-input w3-border" type="text" placeholder="Digite o e-mail" style="width:100%"></p>
-                        <button type="button" class="w3-button w3-red w3-margin-bottom">Inscreva-se</button>
+                        <p><input class="w3-input w3-border w3-center" type="text" placeholder="Digite o e-mail" style="width:100%"></p>
+                        <button type="button" class="w3-button w3-red w3-margin-bottom w3-round-large">Inscreva-se</button>
                 </div>
-            <div class="w3-col s4">
-                <h4>Sobre</h4>
-                <p><a href="#">Sobre nós</a></p>
-                <p><a href="#">Support</a></p>
-                <p><a href="#">Meios de Pagamento</a></p>
-                <p><a href="#">Devoluções</a></p>
-                <p><a href="#">Ajuda e Suporte</a></p>
-            </div>
-
-            <div class="w3-col s4 w3-justify">
-                <h4>Loja</h4>
-                <p><i class="fa fa-fw fa-map-marker"></i> Computer Store</p>
-                <p><i class="fa fa-fw fa-phone"></i> (47)3652-1234</p>
-                <p><i class="fa fa-fw fa-envelope"></i> computer@mail.com</p>
-                <br>
-                <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
-                <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
-                <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
-            </div>
+                <div class="w3-col s4">
+                    <h4>Sobre</h4>
+                    <p><a href="#">Sobre nós</a></p>
+                    <p><a href="#">Support</a></p>
+                    <p><a href="#">Meios de Pagamento</a></p>
+                    <p><a href="#">Devoluções</a></p>
+                    <p><a href="#">Ajuda e Suporte</a></p>
+                </div>
+                <div class="w3-col s4">
+                    <h4>Loja</h4>
+                    <p><i class="fa fa-fw fa-map-marker"></i> Computer Store</p>
+                    <p><i class="fa fa-fw fa-phone"></i> (47)3652-1234</p>
+                    <p><i class="fa fa-fw fa-envelope"></i> computer@mail.com</p>
+                    <br>
+                    <i class="fa fa-facebook-official w3-hover-opacity w3-xlarge"></i>
+                    <i class="fa fa-instagram w3-hover-opacity w3-xlarge"></i>
+                    <i class="fa fa-twitter w3-hover-opacity w3-xlarge"></i>
+                </div>
             </div>
         </footer>
 
@@ -222,42 +211,24 @@
 
         <!-- Newsletter Modal -->
         <div id="newsletter" class="w3-modal">
-        <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
-            <div class="w3-container w3-white w3-center">
-            <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
-            <h2 class="w3-wide">NEWSLETTER</h2>
-            <p>Cadastre-se para não perder as nossas novidades e promoções.</p>
-            <p><input class="w3-input w3-border" type="text" placeholder="Digite o e-mail"></p>
-            <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Cadastre-se</button>
+            <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+                <div class="w3-container w3-white w3-center">
+                <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+                <h2 class="w3-wide">NEWSLETTER</h2>
+                <p>Cadastre-se para não perder as nossas novidades e promoções.</p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Digite o e-mail"></p>
+                <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Cadastre-se</button>
+                </div>
             </div>
-        </div>
         </div>
 
         <script>
         // Accordion 
-        function myAccFunc() {
-        var x = document.getElementById("demoAcc");
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-        } else {
-            x.className = x.className.replace(" w3-show", "");
-        }
-        }
+    
 
         // Click on the "Jeans" link on page load to open the accordion for demo purposes
         document.getElementById("myBtn").click();
 
-
-        // Open and close sidebar
-        function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
-        }
-        
-        function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
-        }
         </script>
 
     </body>
