@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <title>Computer Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .w3-sidebar a {font-family: "Roboto", sans-serif}
+        body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+    </style>
+    <body class="w3-content" style="max-width:1920px">
+
+        <!-- Top menu on small screens -->
+        <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+        <div class="w3-bar-item w3-padding-24 w3-wide">Computer Store <i class="fa fa-laptop"></i></div>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        </header>
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+        <!-- !PAGE CONTENT! -->
+        <div class="w3-main">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+        
+        <!-- Top header -->
+        <header class="w3-row" id="mySidebar" ">
+            <div class="w3-bar w3-padding-32 w3-large w3-black w3-mobile">
+                <a class="w3-bar-item w3-button w3-wide w3-mobile w3-text-deep-orange w3-xlarge w3-round-large" href="index.html"><b>Computer Store <i class="fa fa-laptop"></i></b></a>
+                <div class="w3-left w3-bar-item w3-padding-5 w3-large w3-text-white" style="font-weight:bold">
+                    <a href="index.html" class="w3-bar-item w3-button w3-round-large">Ofertas</a>
+                    <div class="w3-dropdown-hover">
+                        <button class="w3-button w3-round-large w3-block " onclick="myFunction('Demo1')">Crie o Seu Notebook <i class="fa fa-caret-down"></i></button>
+                            <div class="w3-hide " id="Demo1" >
+                                <a href="criarnotebook.html" class=" w3-button w3-block w3-round-large">Intel</a>
+                                <a href="criarnotebook.html" class="w3-button w3-block w3-round-large">AMD</a>
+                                <a href="criarnotebook.html" class="w3-button w3-block w3-round-large">Qualcomm</a>
+                            </div>
+                    </div>
+                </div>
+                <div class="w3-right w3-half w3-bar-item">
+                    <a href="carrinho.html" class="w3-bar-item w3-button w3-round-large w3-mobile w3-margin-right-16">Carrinho<i class="fa fa-shopping-cart w3-margin-left w3-text-deep-orange"></i></a>
+                    <a href="login.html" class="w3-bar-item w3-button w3-round-large">Login<i class="fa fa-user-circle-o w3-margin-left w3-text-deep-orange"></i></a>
+                    <a href="compras.html" class="w3-bar-item w3-button w3-round-large">Compras<i class="fa fa-shopping-bag w3-margin-left w3-text-deep-orange"></i></a>
+                    <a href="index.html" class="w3-bar-item w3-button w3-round-large">Pesquisar<i class="fa fa-search w3-margin-left w3-text-deep-orange"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <div class="w3-container w3-text-deep-orange w3-center" id="modelos">
+            <h1><b>Pagamento</b></h1>
+        </div>
+
+        <div class="w3-center">
+        <div class="w3-row">
+            <div class="w3-col l6 s4">
+                <div class="w3-container">
+                    <h3><b>Forma de Pagamento</b></h3>
+                    <input class="w3-radio" type="radio" name="gender" value="male" checked>
+                        <label>Cartão de Crédito</label>
+                    <img src="./images/visa.png" style="width: 92px; height: 40px;">
+                    <img src="./images/master.png" style="width: 60px; height: 40px;">
+                    <br>
+                    <input class="w3-radio" type="radio" name="gender" value="male" >
+                        <label>Boleto Bancário</label>
+                    <img src="./images/boleto.png" style="margin:10px ; width: 90px; height: 40px;">
+                    <br>
+                    <input class="w3-radio" type="radio" name="gender" value="male" >
+                        <label>Pix</label>
+                    <img src="./images/pixlogo.png" style="margin:10px ; width: 90px; height: 30px;">
+                </div>
+            </div>
+            <div class="w3-col l5 s4">
+                <div class="w3-container w3-row">
+                    <form class="w3-container w3-cell w3-light-grey w3-round-large w3-card-2">
+                        <h3><b>Cartão de Crédito</b></h3>
+                        <div class="w3-twothirds">
+                            <label>Nome do Titular</label>
+                            <input class="w3-input w3-border-0" type="text" placeholder="John Doe" style="width: 400px; height: 50px;">
+                            <br>
+                            <label>Número do Cartão</label>
+                            <input class="w3-input w3-border-0" type="text" placeholder="1234 5678 9101 1121" style="width: 400px; height: 50px;">
+                            <br>
+                        </div>
+                        <div class="w3-third">
+                            <label>Validade</label>
+                            <input class="w3-input w3-border-0" type="text" placeholder="MM/AAAA" style="width: 110px; height: 50px;">
+                            <br>
+                        </div>
+                        <div class="w3-third">
+                            <label>CVC</label>
+                            <input class="w3-input w3-border-0" type="text" placeholder="123" style="width: 110px; height: 50px;">
+                            <br>
+                        </div>
+                        <div class="w3-third">
+                            <label>Parcelas</label>
+                            <select class="w3-select w3-border-0" name="option" style="width: 110px; height: 50px;">
+                                <option value="" disabled selected>1x - 12x</option>
+                                <option value="1">1x</option>
+                                <option value="2">3x</option>
+                                <option value="3">6x</option>
+                                <option value="4">12x</option>
+                              </select>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class=" w3-container w3-center w3-text-grey" id="modelos">
+            <br>
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-deep-orange w3-padding-large w3-large w3-round-large">Finalizar Pedido</button>
+            <br>
+            <br>
+        </div>
+
+       <!-- Modal de Pedido Concluido-->
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-2 w3-animate-zoom">
+                <header class="w3-container w3-deep-orange">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                            class="w3-button w3-display-topright w3-large">&times;
+                    </span>
+                    <h2>Pedido Finalizado!</h2>
+                </header>
+              <div class="w3-container">
+                <p>Obrigado por nos escolher para montar e entregar o seu sonho!</p>
+                <p>Pedido Número: #789219</p>
+                <p><a href="index.html" class=" w3-button w3-deep-orange w3-padding-large w3-large w3-round-large">Ir Para Página Inicial</a></p>
+                <p><a href="compras.html" class=" w3-button w3-deep-orange w3-padding-large w3-large w3-round-large">Ir Para Minhas Compras</a></p>
+              </div>
+            </div>
+          </div>
+        
+        <!-- Footer -->
+        <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+            <div class="w3-row-padding">
+                <div class="w3-col s4">
+                    <h4>Newsletter</h4>
+                        <p>Receba as nossas novidades por e-mail</p>
+                        <p><input class="w3-input w3-border w3-center" type="text" placeholder="Digite o e-mail" style="width:100%"></p>
+                        <button type="button" class="w3-button w3-red w3-margin-bottom w3-round-large">Inscreva-se</button>
+                </div>
+                <div class="w3-col s4">
+                    <h4>Sobre</h4>
+                    <p><a href="#">Sobre nós</a></p>
+                    <p><a href="#">Support</a></p>
+                    <p><a href="#">Meios de Pagamento</a></p>
+                    <p><a href="#">Devoluções</a></p>
+                    <p><a href="#">Ajuda e Suporte</a></p>
+                </div>
+                <div class="w3-col s4">
+                    <h4>Loja</h4>
+                    <p><i class="fa fa-fw fa-map-marker"></i> Computer Store</p>
+                    <p><i class="fa fa-fw fa-phone"></i> (47)3652-1234</p>
+                    <p><i class="fa fa-fw fa-envelope"></i> computer@mail.com</p>
+                    <br>
+                    <i class="fa fa-facebook-official w3-hover-opacity w3-xlarge"></i>
+                    <i class="fa fa-instagram w3-hover-opacity w3-xlarge"></i>
+                    <i class="fa fa-twitter w3-hover-opacity w3-xlarge"></i>
+                </div>
+            </div>
+        </footer>
+
+        <div class="w3-black w3-center w3-padding-24">Criado por Igor Bueno Franco e Jailson Eduardo Ferens - Qualidade de Software - UnC 2021</div>
+
+        <!-- End page content -->
+        </div>
+
+        <script>
+            // Accordion 
+            function myFunction(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+            </script>
+
+    </body>
+</html>
